@@ -4,19 +4,26 @@
 #SBATCH --partition=fast
 #SBATCH --time=02:00:00
 
-#Importamos los m骴ulos del cl鷖ter y el programa FastQC
+#Importamos los m贸dulos del cl煤ster y el programa FastQC
 module use /beegfs/easybuild/CentOS/7.6.1810/Skylake/modules/all
 module use /beegfs/easybuild/common/modules/all
 module load FastQC/0.11.8-Java-1.8
 
-#
-fastqc -o ~/DATOS_DNA-SEQ/dnaseq/results/resultados_originales -t 6 *.fastq.gz
+#Importamos los m贸dulos del cl煤ster y el programa FastQC
+module use /beegfs/easybuild/CentOS/7.6.1810/Skylake/modules/all
+module use /beegfs/easybuild/common/modules/all
+module load FastQC/0.11.8-Java-1.8
+
+#Ejecutamos el an谩lisis de FastQC
+fastqc -o ~/DATOS_DNA-SEQ/originales/FASTQC -t 6 *.fastq.gz
+#-t especifica el n煤mero de threads que se deben usar
+#A continuaci贸n, se especifica el/los archivos sobre los que se debe hacer el an谩lisis. En este caso, usando wildcards podemos agilizar que se realice en todos los archivos de la secuenciaci贸n, sin tener que especificar todos los nombres. 
 
 #Activamos nuestro usuario de mamba para poder acceder a MultiQC
 mamba init
 mamba activate irenegmasurca
 
 #Ejecutamos MultiQC
-multiqc /home/ireneg/DATOS_DNA-SEQ/FASTQC/results/resultados_originales/ -o multiqc_fastqc_inicial -p
+multiqc /home/ireneg/DATOS_DNA-SEQ/originales/FASTQC -o multiqc_fastqc_inicial -p
 #-o indica el nombre del directorio en el que se va a guardar el output
-#-p se usa para exportar los gr醘icos 
+#-p se usa para exportar los gr谩ficos 
