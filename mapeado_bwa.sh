@@ -4,7 +4,7 @@
 #SBATCH --partition=long
 #SBATCH --time=4-00:00:00
 
-#Cargamos los m�dulos y el programa:
+#Cargamos los módulos y el programa:
 module use /beegfs/easybuild/CentOS/7.6.1810/Skylake/modules/all
 module use /beegfs/easybuild/common/modules/all
 module load BWA/0.7.17-GCC-8.2.0-2.31.1
@@ -13,9 +13,9 @@ module load picard/2.26.10-Java-15
 
 #En primer lugar, ejecutamos el programa mapeando las lecturas al genoma de referencia Guy11
 cd "/home/ireneg/DATOS_DNA-SEQ/originales/MagorGY11_1/Mycocosm/Assembly/Genome Assembly (unmasked)" #Nos movemos a la carpeta que contiene el genoma de referencia de Guy11
-bwa index MagorGY11_1_AssemblyScaffolds.fasta #Creamos el �ndice del genoma de referencia Guy11
+bwa index MagorGY11_1_AssemblyScaffolds.fasta #Creamos el índice del genoma de referencia Guy11
 
-#Se mapean las lecturas originales de la secuenciaci�n
+#Se mapean las lecturas originales de la secuenciación
 cd /home/ireneg/DATOS_DNA-SEQ/originales_descompr/ #Nos desplazamos a la carpeta con las carpetas de las muestras
 for folder in $(ls -d C*/); do #Recorremos las carpetas de las muestras, en las que se encuentran las lecturas originales sin comprimir
         cd $folder #Entramos en la carpeta
@@ -39,16 +39,16 @@ for folder in $(ls -d */); do #Recorremos las carpetas de las muestras, en las q
         cd ..#Salimos de la carpeta de la muestra
 done
 #Al filtrar las lecturas con fastp, algunas de las lecturas quedan desemparejadas, por lo que se deben mapear al genoma de manera independiente
-
+#Consecuentemente, el mapeado de las lecturas filtradas de una muestra estará dividido en el mapeado de las lecturas emparejadas, de las lecturas que quedaron demeparejadas forward y las que quedaron desemparejadas reverse.   
               
         
 
 
 #En segundo lugar, ejecutamos el programa mapeando las lecturas al genoma de referencia 70-15
 cd "/home/ireneg/DATOS_DNA-SEQ/originales/ncbi_dataset/data/GCF_000002495.2/" #Nos movemos a la carpeta que contiene el genoma de referencia de 70-15
-bwa index GCF_000002495.2_MG8_genomic.fna #Construimos el �ndice del genoma de referencia 70-15
+bwa index GCF_000002495.2_MG8_genomic.fna #Construimos el índice del genoma de referencia 70-15
 
-#Se mapean las lecturas originales de la secuenciaci�n
+#Se mapean las lecturas originales de la secuenciación
 cd /home/ireneg/DATOS_DNA-SEQ/originales_descompr/ #Nos desplazamos a la carpeta con las carpetas de las muestras
 for folder in $(ls -d C*/); do #Recorremos las carpetas de las muestras, en las que se encuentran las lecturas originales sin comprimir
         cd $folder #Entramos en la carpeta
