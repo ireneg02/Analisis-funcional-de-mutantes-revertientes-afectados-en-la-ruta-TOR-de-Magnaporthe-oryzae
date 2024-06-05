@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH --mem=100GB
-#SBATCH --job-name unfiltSOAPdenovo2
+#SBATCH --job-name SOAPdenovo2
 #SBATCH --partition=long
 #SBATCH --time=2-00:00:00          # total run time limit in HH:MM:SS
 
