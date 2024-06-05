@@ -10,7 +10,7 @@ module use /beegfs/easybuild/common/modules/all
 module load SOAPdenovo2/r242
 
 
-cd /home/ireneg/DATOS_DNA-SEQ/originales_descompr/ #Nos desplazamos a la carpeta con las carpetas de las muestras
+cd /home/ireneg/DATOS_DNA-SEQ/procesamiento/ #Nos desplazamos a la carpeta con las carpetas de las muestras
 for folder in $(ls -d */); do  #Recorremos las carpetas de las muestras
         cd $folder #Entramos en la carpeta
         file="${folder:0:18}" #Obtenemos el nombre de la muestra
