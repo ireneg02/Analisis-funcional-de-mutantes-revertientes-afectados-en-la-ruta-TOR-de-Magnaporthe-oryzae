@@ -43,7 +43,7 @@ for folder in $(ls -d C*/); do  #Recorremos las carpetas de las muestras
         SOAPdenovo-63mer all -s SOAPdenovo2/config_file -o SOAPdenovo2/K33/output -K 33 #Ejecutamos SOAPdenovo con un tamaño de kmer de 33
         SOAPdenovo-63mer all -s SOAPdenovo2/config_file -o SOAPdenovo2/K55/output -K 55 #Ejecutamos SOAPdenovo con un tamaño de kmer de 55
         
-        cd ..
+        cd .. #Salimos de la carpeta de la muestra
 done
 
 #En el comando de ejecución de SOAPdenovo2:
