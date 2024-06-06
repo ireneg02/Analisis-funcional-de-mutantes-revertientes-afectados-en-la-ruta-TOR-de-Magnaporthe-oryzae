@@ -16,6 +16,7 @@ for folder in $(ls -d C*/); do #Recorremos las carpetas de las muestras, en las 
         cd $folder #Entramos en la carpeta
         file="${folder:0:18}" #Obtenemos el nombre de la muestra 
         chromosome_scaffolder.sh -r "/home/ireneg/DATOS_DNA-SEQ/originales/MagorGY11_1/Mycocosm/Assembly/Genome_Assembly_(unmasked)//MagorGY11_1_AssemblyScaffolds.fasta" -q CA/primary.genome.scf.fasta -t 30 -nb #Ejecutamos chromosome scaffolder
+        mv MagorGY11_1_AssemblyScaffolds.fasta.primary.genome.scf.fasta.split.reconciled.fa Chromosome_scaffolder #Copiamos el archivo con los scaffodls a una carpeta llamada Chromosome_scaffolder
         cd .. #Salimos de la carpeta de la muestra
 done
 
