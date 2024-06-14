@@ -6,3 +6,7 @@ Anteriormente a la realización de este trabajo, se habían seleccionado y secue
 El mutante Δrbp35 exhibe alteraciones en la vía TOR y modificaciones en la expresión de transposones, pero la relación entre estos fenómenos no está completamente caracterizada. Dado que las cepas revertientes recuperaron la sensibilidad a la rapamicina, es razonable suponer que presentan alguna modificación genética vinculada a la vía TOR. Adicionalmente, se planteó la hipótesis de que estas cepas podrían tener un contenido de transposones diferente. 
 
 Con el análisis de este experimento de DNA-seq se pretendían determinar las diferencias genómicas entre estirpes y relacionarlas con el cambio fenotípico observado. En concreto, se buscaba dilucidar si las regiones alteradas contenían genes relacionados con la ruta TOR y si los revertientes presentaban cambios en la cantidad de transposones. Además, este proyecto busca optimizar el flujo de trabajo seleccionando las herramientas bioinformáticas más adecuadas para el tratamiento de datos. 
+
+
+###Ejecución de los scripts
+Durante este trabajo se ejecutó en primer lugar el script analisis_calidad_inicial.sh
