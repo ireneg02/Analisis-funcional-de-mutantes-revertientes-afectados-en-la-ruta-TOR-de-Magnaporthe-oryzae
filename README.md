@@ -8,5 +8,15 @@ El mutante Δrbp35 exhibe alteraciones en la vía TOR y modificaciones en la exp
 Con el análisis de este experimento de DNA-seq se pretendían determinar las diferencias genómicas entre estirpes y relacionarlas con el cambio fenotípico observado. En concreto, se buscaba dilucidar si las regiones alteradas contenían genes relacionados con la ruta TOR y si los revertientes presentaban cambios en la cantidad de transposones. Además, este proyecto busca optimizar el flujo de trabajo seleccionando las herramientas bioinformáticas más adecuadas para el tratamiento de datos. 
 
 
-### Ejecución de los scripts
-Durante este trabajo se ejecutó en primer lugar el script analisis_calidad_inicial.sh
+### Orden de ejecución de los scripts
+Durante este trabajo se ejecutaron los scripts:
+1) analisis_calidad_inicial.sh
+2) filtrado_trimmomatic.sh
+3) filtrado_fastp.sh
+4) mapeado_segemehl.sh
+5) mapeado_bwa.sh
+6) avg_ins_SOAPdenovo2_picard.sh
+7) ensamblado_SOAPdenovo2.sh
+8) ensamblado_SPAdes.sh
+9) ensmablado_MaSuRCA.sh
+10) ensamblado_MaSuRCA_Chromosome_scaffolder.sh
