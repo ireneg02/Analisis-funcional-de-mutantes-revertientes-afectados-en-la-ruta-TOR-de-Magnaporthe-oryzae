@@ -27,4 +27,5 @@ Durante este trabajo se ejecutaron los scripts:
 15) variantes_puntuales_GATK.sh
 16) SNP_vcf2gwas.sh
 17) TE_RepeatMasker.sh
-18) coverage_SAMBEDtools.sh
+18) variantes_estructurales_delly.sh
+19) coverage_SAMBEDtools.sh
